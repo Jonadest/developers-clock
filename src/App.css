@@ -15,6 +15,7 @@ body {
   align-items: center;
   align-content: center;
   height: 100vh;
+  position: relative;
 }
 
 .timer-wrapper {
@@ -28,7 +29,7 @@ body {
 
 h1 {
   font-size: 8rem;
-  padding-top: 100px;
+  padding-top: 10px;
 }
 
 button {
@@ -45,10 +46,18 @@ button {
 .copyright {
   color: #fff;
   font-size: 12px;
-  padding-top: 100px;
+  padding-bottom: 10px;
   text-align: center;
 }
 
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 .active {
   background-color: red;
   color: #fff;
@@ -75,16 +84,5 @@ button:hover {
   text-align: center;
 }
 /* Apply landscape orientation only on mobile devices */
-@media only screen and (max-width: 768px) {
-  .copyright {
-    color: #fff;
-    font-size: 12px;
-    padding-top: 50px;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 7rem;
-    padding-top: 0px;
-  }
+@media only screen and (max-width: 368px) {
 }

@@ -116,7 +116,9 @@ const Timer = () => {
             <i className="fa-solid fa-up-right-and-down-left-from-center"></i>
           )}
         </button>
-        <p className="copyright">Copyright {currentYear} Jonadest</p>
+        <footer>
+          <p className="copyright">Copyright {currentYear} Jonadest</p>
+        </footer>
       </div>
     </div>
   );
