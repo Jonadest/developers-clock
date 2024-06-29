@@ -6,10 +6,15 @@ const Clock = () => {
   useEffect(() => {
     const updateClock = () => {
       const now = new Date();
-      const hours = now.getHours().toString().padStart(2, "0");
+      let hours = now.getHours();
       const minutes = now.getMinutes().toString().padStart(2, "0");
       const seconds = now.getSeconds().toString().padStart(2, "0");
-      setTime(`${hours}:${minutes}:${seconds}`);
+      const ampm = hours >= 12 ? "PM" : "AM";
+
+      hours = hours % 12 || 12; // Convert to 12-hour format, '0' becomes '12'
+      hours = hours.toString().padStart(2, "0");
+
+      setTime(`${hours}:${minutes}:${seconds} ${ampm}`);
     };
 
     const intervalId = setInterval(updateClock, 1000);
