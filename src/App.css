@@ -1,0 +1,97 @@
+*,
+body {
+  font-family: "Francois One", sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+}
+
+.timer-wrapper {
+  text-align: center;
+  color: lawngreen;
+}
+
+.clock {
+  color: #fff;
+}
+
+h1 {
+  font-size: 8rem;
+  padding-top: 200px;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  background-color: lime;
+  color: black;
+  margin: 3px;
+  margin-top: 10px;
+}
+
+.copyright {
+  color: #fff;
+  font-size: 12px;
+  padding-top: 180px;
+  text-align: center;
+}
+
+.active {
+  background-color: red;
+  color: #fff;
+}
+
+.pause {
+  background-color: limegreen;
+}
+
+.fullscreen {
+  background-color: green;
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(4, 36, 4);
+  color: #fff;
+  transition: all ease-in-out 0.5s;
+}
+
+/* Apply landscape orientation only on mobile devices */
+@media only screen and (max-width: 768px) {
+  .copyright {
+    color: #fff;
+    font-size: 12px;
+    padding-top: 80px;
+    text-align: center;
+  }
+  /*  .landscape {
+    transform: rotate(0deg);
+    transform-origin: center center;
+    width: 100vh;
+    height: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    font-size: 1rem;
+  } */
+
+  h1 {
+    font-size: 7rem;
+    padding-top: 0px;
+  }
+}
