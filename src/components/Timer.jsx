@@ -97,7 +97,7 @@ const Timer = () => {
   }, [isFullscreen]);
 
   return (
-    <div className={`container ${isFullscreen ? "landscape" : ""}`}>
+    <div>
       <div className="timer-wrapper">
         <h1>{formatTime(time)}</h1>
         <button
