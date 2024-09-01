@@ -1,88 +1,11 @@
-*,
-body {
-  font-family: "Francois One", sans-serif;
-  font-style: normal;
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: black;
+  list-style: none;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  height: 100vh;
-  position: relative;
-}
-
-.timer-wrapper {
-  text-align: center;
-  color: lawngreen;
-}
-
-.clock {
-  color: #fff;
-}
-
-h1 {
-  font-size: 8rem;
-  padding-top: 10px;
-}
-
-button {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 3px;
-  font-size: 18px;
-  background-color: lime;
-  color: black;
-  margin: 3px;
-  margin-top: 10px;
-}
-
-.copyright {
-  color: #fff;
-  font-size: 12px;
-  padding-bottom: 10px;
-  text-align: center;
-}
-
-footer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.active {
-  background-color: red;
-  color: #fff;
-}
-
-.pause {
-  background-color: limegreen;
-}
-
-.fullscreen {
-  background-color: green;
-  color: white;
-}
-
-button:hover {
-  background-color: rgb(4, 36, 4);
-  color: #fff;
-  transition: all ease-in-out 0.5s;
-}
-
-#clock {
-  color: #fff;
-  font-size: 2rem;
-  text-align: center;
-}
-/* Apply landscape orientation only on mobile devices */
-@media only screen and (max-width: 368px) {
+body {
+  font-family: "Francois One", sans-serif;
+  overflow: hidden;
 }

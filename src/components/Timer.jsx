@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import "./Timer.css";
+import Clock from "./Clock";
 
 const Timer = () => {
   const [time, setTime] = useState(0);
@@ -47,14 +49,10 @@ const Timer = () => {
     setTime(0);
   };
 
-  const formatTime = (time) => {
-    const getSeconds = `0${time % 60}`.slice(-2);
-    const minutes = `${Math.floor(time / 60)}`;
-    const getMinutes = `0${minutes % 60}`.slice(-2);
-    const getHours = `0${Math.floor(time / 3600)}`.slice(-2);
-
-    return `${getHours} : ${getMinutes} : ${getSeconds}`;
-  };
+  const getSeconds = `0${time % 60}`.slice(-2);
+  const minutes = `${Math.floor(time / 60)}`;
+  const getMinutes = `0${minutes % 60}`.slice(-2);
+  const getHours = `0${Math.floor(time / 3600)}`.slice(-2);
 
   const handleFullscreen = () => {
     if (!isFullscreen) {
@@ -99,27 +97,38 @@ const Timer = () => {
   return (
     <div>
       <div className="timer-wrapper">
-        <h1>{formatTime(time)}</h1>
-        <button
-          className={isRunning ? "btn" : "active"}
-          onClick={handleStartPause}
-        >
-          {isRunning ? "Pause" : "Start"}
-        </button>
-        <button className="btn pause" onClick={handleReset} disabled={!time}>
-          Reset
-        </button>
-        <button className="btn fullscreen" onClick={handleFullscreen}>
-          {isFullscreen ? (
-            <i className="fa-solid fa-up-right-and-down-left-from-center"></i>
-          ) : (
-            <i className="fa-solid fa-up-right-and-down-left-from-center"></i>
-          )}
-        </button>
-        <footer>
-          <p className="copyright">Copyright {currentYear} Jonadest</p>
-        </footer>
+        <p className="clock">
+          <Clock />
+        </p>
+        <div className="timer ">
+          <li>{getHours}</li>
+          <li>{getMinutes}</li>
+          <li className="sec1">
+            {getSeconds} <span className="sec2">{getSeconds}</span>
+          </li>
+        </div>
+        <div className="buttons">
+          <button
+            className={isRunning ? "btn" : "active"}
+            onClick={handleStartPause}
+          >
+            {isRunning ? "Pause" : "start"}
+          </button>
+          <button className="btn pause" onClick={handleReset} disabled={!time}>
+            Reset
+          </button>
+          <button className="btn fullscreen" onClick={handleFullscreen}>
+            {isFullscreen ? (
+              <i className="fa-solid fa-up-right-and-down-left-from-center"></i>
+            ) : (
+              <i className="fa-solid fa-up-right-and-down-left-from-center"></i>
+            )}
+          </button>
+        </div>
       </div>
+      <footer>
+        <p className="copyright">Copyright {currentYear} Jonadest</p>
+      </footer>
     </div>
   );
 };
