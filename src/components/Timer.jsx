@@ -104,7 +104,8 @@ const Timer = () => {
           <li>{getHours}</li>
           <li>{getMinutes}</li>
           <li className="sec1">
-            {getSeconds} <span className="sec2">{getSeconds}</span>
+            {getSeconds}{" "}
+            <span className={isRunning ? "sec2" : "disable"}>{getSeconds}</span>
           </li>
         </div>
         <div className="buttons">
