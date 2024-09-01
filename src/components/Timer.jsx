@@ -112,7 +112,7 @@ const Timer = () => {
             className={isRunning ? "btn" : "active"}
             onClick={handleStartPause}
           >
-            {isRunning ? "Pause" : "start"}
+            {isRunning ? "Pause" : "Start"}
           </button>
           <button className="btn pause" onClick={handleReset} disabled={!time}>
             Reset
